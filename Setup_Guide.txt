@@ -15,11 +15,17 @@ a) Install Python:
    - Download from https://python.org
    - Add to PATH during installation
 
-b) Install Git:
+b) Create encrypt.py in the project root:
+   - Create a new file named 'encrypt.py'
+   - This file is essential for the encryption features
+   - Contains EncryptedFAISS and EncryptedRetriever classes
+   - Required for secure vector store operations
+
+c) Install Git:
    - Download from https://git-scm.com
    - Use default installation options
 
-c) Install Ollama:
+d) Install Ollama:
    - Visit https://ollama.ai
    - Follow OS-specific installation instructions
    - Verify installation: `ollama --version`
