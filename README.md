@@ -80,6 +80,13 @@ MODEL_EMBEDDING=all-MiniLM-L6-v2
 - Optimized Ollama parameters
 - Efficient memory management
 
+## 📊 Future enhancement
+
+- Drop down list for folder input
+- Detailed Excel uploader
+- Add authentication and access control
+- Secure memory management (
+
 ## 🤝 Contributing
 
 1. Fork the repository
