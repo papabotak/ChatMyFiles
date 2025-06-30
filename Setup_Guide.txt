@@ -1,0 +1,101 @@
+=== Secure RAG Chat Application Setup Guide ===
+
+1. SYSTEM REQUIREMENTS
+---------------------
+- CPU: 4+ cores recommended
+- RAM: 8GB minimum, 16GB recommended
+- Storage: 10GB free space
+- OS: Windows 10/11, Linux, or macOS
+- Python 3.8 or higher
+- Git
+
+2. PREREQUISITES INSTALLATION
+---------------------------
+a) Install Python:
+   - Download from https://python.org
+   - Add to PATH during installation
+
+b) Install Git:
+   - Download from https://git-scm.com
+   - Use default installation options
+
+c) Install Ollama:
+   - Visit https://ollama.ai
+   - Follow OS-specific installation instructions
+   - Verify installation: `ollama --version`
+
+3. APPLICATION SETUP
+------------------
+a) Clone Repository:
+   git clone https://github.com/yourusername/secure-rag-chat.git
+   cd secure-rag-chat
+
+b) Virtual Environment:
+   python -m venv venv
+   # Activate:
+   # Windows: venv\Scripts\activate
+   # Unix: source venv/bin/activate
+
+c) Install Dependencies:
+   pip install -r requirements.txt
+
+d) Environment Configuration:
+   - Copy .env.example to .env
+   - Configure variables:
+     * OPENAI_API_KEY (optional)
+     * MY_FOLDER (document path)
+     * Other model configurations
+
+4. RUNNING THE APPLICATION
+------------------------
+a) Start Ollama Server:
+   ollama serve
+
+b) Pull Required Model:
+   ollama pull llama2:latest
+
+c) Launch Application:
+   # Public Chat:
+   python PublicChat.py
+   # Private Chat:
+   python PrivateChat.py
+
+d) Access Interface:
+   - Open browser
+   - Navigate to http://localhost:7860
+
+5. TROUBLESHOOTING
+-----------------
+a) Memory Issues:
+   - Adjust chunk_size in RAGWorkflow
+   - Reduce num_ctx in Ollama configuration
+
+b) Performance Issues:
+   - Check CPU usage
+   - Adjust num_thread parameter
+   - Consider enabling GPU support
+
+c) Common Errors:
+   - "Port in use": Change port in launch()
+   - "Model not found": Run ollama pull
+   - "Memory error": Reduce batch size
+
+6. MAINTENANCE
+------------
+- Regular cleanup: python cleanup.py
+- Update dependencies: pip install -r requirements.txt --upgrade
+- Check for updates: git pull
+
+7. SECURITY CONSIDERATIONS
+------------------------
+- Keep .env secure
+- Regular security updates
+- Monitor system resources
+- Review access logs
+- Backup configuration
+
+8. SUPPORT
+---------
+For issues and support:
+- GitHub Issues
+- Email: mohd.shahrils@yahoo.com
